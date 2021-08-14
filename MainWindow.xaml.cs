@@ -35,7 +35,7 @@ namespace USBTracker
             HwndSource source = HwndSource.FromHwnd(new WindowInteropHelper(this).Handle);
             if (source != null)
             {
-                var windowHandle = source.Handle;
+                var windowHandle = source.Handle; 
                 source.AddHook(HwndHandler);
                 UsbNotification.RegisterUsbDeviceNotification(windowHandle);
             }
